@@ -1,5 +1,5 @@
 let userCity = prompt("Введіть ваше місто");
-// let cityUrl = `http://api.openweathermap.org/data/2.5/weather?q=${userCity}&units=metric&APPID=5d066958a60d315387d9492393935c19`;
+// let cityUrl = `https://api.openweathermap.org/data/2.5/weather?q=${userCity}&units=metric&APPID=5d066958a60d315387d9492393935c19`;
 // console.log(userCity);
 // console.log(cityUrl);
 
@@ -7,7 +7,7 @@ const theWeather = document.querySelector("#weather");
 
 function showWeather() {
   fetch(
-    `http://api.openweathermap.org/data/2.5/weather?q=${userCity}&units=metric&APPID=5d066958a60d315387d9492393935c19`
+    `https://api.openweathermap.org/data/2.5/weather?q=${userCity}&units=metric&APPID=5d066958a60d315387d9492393935c19`
   )
     .then((res) => res.json())
     .then((data) => {
@@ -34,7 +34,7 @@ function showWeather() {
           <div class="temp">Температура повітря:  ${temp} C.</div>
           <div class="pressure">Атмосферний тиск:  ${pressure} мм.</div>
           <div class="description">Погода:  ${description} </div>
-          <img src="http://openweathermap.org/img/w/${icon}.png" alt="Weather">
+          <img src="https://openweathermap.org/img/w/${icon}.png" alt="Weather">
           <div class="humidity">Відносна вологість повітря:  ${humidity} %</div>
           <div class="speed">Швидкість вітру:  ${speed} м/с</div>
           <div class="deg">Напрям вітру:  ${deg} град.</div>`;
